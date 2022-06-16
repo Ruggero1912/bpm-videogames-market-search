@@ -1,0 +1,24 @@
+,id,created_at,name,slug,updated_at,url,checksum
+0,4,1297555200,Fighting,fighting,1323216000,https://www.igdb.com/genres/fighting,2ccc6572-bdde-6ed4-8843-25447ea40782
+1,5,1297555200,Shooter,shooter,1323216000,https://www.igdb.com/genres/shooter,bb15fd3f-0f46-e5f3-2b40-d046cf9bd2ef
+2,7,1297555200,Music,music,1323216000,https://www.igdb.com/genres/music,22d44a0d-89c7-580f-eef2-e06f178fdd47
+3,8,1297555200,Platform,platform,1323216000,https://www.igdb.com/genres/platform,697fc5a4-b96f-a803-288a-498bd5dd1de1
+4,9,1297555200,Puzzle,puzzle,1323216000,https://www.igdb.com/genres/puzzle,616de9c3-8a00-0232-9df9-00014cfac51b
+5,10,1297555200,Racing,racing,1323216000,https://www.igdb.com/genres/racing,73c2653f-54d8-c1bd-d523-dd57fb753194
+6,11,1297555200,Real Time Strategy (RTS),real-time-strategy-rts,1323216000,https://www.igdb.com/genres/real-time-strategy-rts,aaa36cbc-2258-8653-a461-1358df8ce445
+7,12,1297555200,Role-playing (RPG),role-playing-rpg,1323216000,https://www.igdb.com/genres/role-playing-rpg,42dea3b2-7fe2-e734-91cd-f80ce62a14c3
+8,13,1297555200,Simulator,simulator,1323216000,https://www.igdb.com/genres/simulator,9779772a-f08f-9e8e-bd26-70c9eecc34e8
+9,14,1297555200,Sport,sport,1323216000,https://www.igdb.com/genres/sport,e598c458-3e21-7a14-50a5-ea53733ab22f
+10,15,1297555200,Strategy,strategy,1323216000,https://www.igdb.com/genres/strategy,d7863f95-0f2c-0f2d-c1e9-29d06eaf3396
+11,16,1297641600,Turn-based strategy (TBS),turn-based-strategy-tbs,1323216000,https://www.igdb.com/genres/turn-based-strategy-tbs,af5d3ecd-2ebd-358b-70df-e9204b9761be
+12,24,1300924800,Tactical,tactical,1323216000,https://www.igdb.com/genres/tactical,6132b15f-289e-60ea-5957-7c78b97053a2
+13,26,1301961600,Quiz/Trivia,quiz-trivia,1323216000,https://www.igdb.com/genres/quiz-trivia,256a99dd-dd06-bc0c-d53b-dc3098da4d49
+14,25,1301616000,Hack and slash/Beat 'em up,hack-and-slash-beat-em-up,1323216000,https://www.igdb.com/genres/hack-and-slash-beat-em-up,4bd95a5d-8fa1-1aee-4ea9-224b4b1312f7
+15,30,1320192000,Pinball,pinball,1323216000,https://www.igdb.com/genres/pinball,b5657d72-ee36-0851-58df-e8d2413283f8
+16,31,1323561600,Adventure,adventure,1323561600,https://www.igdb.com/genres/adventure,a6d85192-8d11-bad3-cc5c-dd89e2f94a47
+17,33,1380931200,Arcade,arcade,1380931200,https://www.igdb.com/genres/arcade,388cec36-d099-f4a1-31c3-f938fae9067b
+18,34,1571788800,Visual Novel,visual-novel,1571788800,https://www.igdb.com/genres/visual-novel,137fe5c7-e4bc-1c30-4c7c-54596b47448f
+19,32,1341360000,Indie,indie,1341360000,https://www.igdb.com/genres/indie,2522259f-2454-ec02-5dc0-84373e0508ed
+20,35,1588809600,Card & Board Game,card-and-board-game,1588809600,https://www.igdb.com/genres/card-and-board-game,137bcfbe-be08-0b36-b66e-1bfef14ca49a
+21,36,1588809600,MOBA,moba,1588809600,https://www.igdb.com/genres/moba,0f17b3a1-6d97-4c02-0997-850adf4dc624
+22,2,1297555200,Point-and-click,point-and-click,1323302400,https://www.igdb.com/genres/point-and-click,ef2ff68a-f7bd-d2d0-76cb-c830bd6e3191
