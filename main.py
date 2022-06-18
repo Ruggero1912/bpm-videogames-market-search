@@ -34,17 +34,18 @@ def load_all_IGDB_genres_and_store_in_csv(output_file="IGDB_genres.csv"):
     genres_dataframe.to_csv(output_file, index=False)
     return genres_dataframe
 
-"""
-1. get most pop games (sorted by total reviews counter)
-2. salvo i games in una list
- - e salvo le keyword ids in una list prevenendo duplicati
-(optional): salvo le row trovate in un dataframe
-3. chiamo get keywords infos
-4. salvo name e id delle keywords (o volendo anche tutte le info delle keyword) in un dataframe
-5. esporto i dataframe in csv
-"""
 
-def foo(games_genre_id_IGDB = 4, keyword_ids_file="keyword_ids.csv", keyword_infos_file="keyword_infos.csv"):
+def load_tags_dict(games_genre_id_IGDB = 4, keyword_ids_file="keyword_ids.csv", keyword_infos_file="keyword_infos.csv"):    
+    """
+    1. get most pop games (sorted by total reviews counter)
+    2. salvo i games in una list
+    - e salvo le keyword ids in una list prevenendo duplicati
+    (optional): salvo le row trovate in un dataframe
+    3. chiamo get keywords infos
+    4. salvo name e id delle keywords (o volendo anche tutte le info delle keyword) in un dataframe
+    5. esporto i dataframe in csv
+    nel dataframe risultante ho anche informazione su quante volte è stata incontrata la keyword
+    """
     print(f"Going to load the most reviewed games from IGDB whose IGDB genre_id is {games_genre_id_IGDB}")
     pop_games_list = IGDBAPI.get_most_popular_games(games_genre_id_IGDB)
     keyword_ids_dict = {}
@@ -84,3 +85,15 @@ def foo(games_genre_id_IGDB = 4, keyword_ids_file="keyword_ids.csv", keyword_inf
     print("Going to store the full infos of all keywords to file...")
 
     keyword_infos_dataframe.to_csv(keyword_infos_file, index=False)
+
+def export_dictionary(input_file="keyword_infos.csv", output_file="tags_dict.csv"):
+    """
+    receives as input the tags dict with all the attributes, 
+    stores a new csv with only the tag wich counter > THRESHOLD and stores only the slug of the tag word (lowered word, unique)
+    """
+    THRESHOLD = 20
+    tags_all_infos = pd.read_csv(input_file)
+    tags_df = tags_all_infos[["slug", "counter"]]
+    tags_df = tags_df[tags_df["counter"] >= THRESHOLD].sort_values(by=['counter'], ascending=False)
+    tags_df["slug"] = tags_df["slug"].str.replace("-", " ")
+    tags_df.to_csv(output_file, index=False)
