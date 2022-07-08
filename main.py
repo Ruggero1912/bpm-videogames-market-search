@@ -3,6 +3,9 @@ from IGDBAPI import IGDBAPI
 
 import pandas as pd
 
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 from Utils import Utils
 
 
@@ -97,3 +100,27 @@ def export_dictionary(input_file="keyword_infos.csv", output_file="tags_dict.csv
     tags_df = tags_df[tags_df["counter"] >= THRESHOLD].sort_values(by=['counter'], ascending=False)
     tags_df["slug"] = tags_df["slug"].str.replace("-", " ")
     tags_df.to_csv(output_file, index=False)
+
+def load_dict_scores_distribution(input_file="tags_dict_with_weigths.csv", output_file="dict_scores_distribution.jpg"):
+    tags_all_infos = pd.read_csv(input_file, sep=";")
+    label = "Column1"
+    #tags_all_infos[label].value_counts().plot(kind='bar')
+    
+    sns.set(style="darkgrid")
+    ax = sns.countplot(x=label, data=tags_all_infos)
+
+    ax.set_title("Scores distribution")
+
+    ax.set_xlabel("Assigned score")
+
+    ax.set_ylabel("How many tags")
+    
+    ##difficulty_natbr_c = tags_all_infos.groupby(label).count()
+    ##foo_df = pd.DataFrame({"natbr" : difficulty_natbr_c, "dist" : difficulty_dist_c, "freq" : difficulty_freq_c})
+    ##foo_df.rename(index={0 : "HARD", 1 : "MEDIUM" , 2 : "EASY"}, inplace=True)
+
+    #ax = foo_df.plot.bar()
+    plt.savefig(output_file)
+    plt.show()
+
+#load_dict_scores_distribution()
